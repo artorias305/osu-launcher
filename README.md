@@ -15,8 +15,11 @@ This repository contains an open-source osu! launcher written in Python. The osu
 4. Click the "Launch Private Server" button to connect to the private server with the specified IP.
 
 # Installation
+You can download the executable (only for windows) in the [Releases](https://github.com/artorias305/osu-launcher/releases/) page.
+
+# Build from your device
 1. Clone the repository: `git clone https://github.com/artorias305/osu-launcher.git`
-2. Install the required dependecies: `pip install requirements.txt`
+2. Install the required dependecies: `pip install requirements.txt` or just `pip install flet` (only library being used).
 3. Run the launcher: `python main.py`
 
 # Contributions
