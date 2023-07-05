@@ -6,11 +6,18 @@ import subprocess
 def main(page: Page):
     page.title = "Osu! Launcher"
     appdata_path = os.getenv('LOCALAPPDATA')
+    page.window_width = "720"
+    page.window_height = "480"
     page.horizontal_alignment = flet.CrossAxisAlignment.CENTER
     page.vertical_alignment = flet.MainAxisAlignment.CENTER
-    page.window_width = "630"
-    page.window_height = "270"
-    page.window_resizable = False
+    page.window_resizable = True
+    page.theme = flet.Theme(
+        color_scheme=flet.ColorScheme(
+            primary=flet.colors.WHITE,
+            primary_container=flet.colors.PINK_900
+        )
+    )
+    page.theme_mode = "dark"
 
     def get_osu_path():
         osu_path = os.path.join(appdata_path, 'osu!')
@@ -53,38 +60,34 @@ def main(page: Page):
         save_server_ip(serverip)
         bs.update()
 
-    def change_theme(e):
-        page.theme_mode = (
-            flet.ThemeMode.DARK
-            if page.theme_mode == flet.ThemeMode.LIGHT
-            else flet.ThemeMode.LIGHT
-        )
-        mode.label = (
-            "Light theme" if page.theme_mode == flet.ThemeMode.LIGHT else "Dark Theme"
-        )
-        page.update()
-
     def close(*args):
         page.window_destroy()
-
-    page.theme_mode = flet.ThemeMode.DARK
-    mode = Switch(label="Dark theme", on_change=change_theme)
 
     txt_server_ip = TextField(hint_text="Enter server IP (e.g. akatsuki.pw)")
     bs = BottomSheet(
         flet.Container(
             flet.Column([
                 txt_server_ip,
-                flet.ElevatedButton("Confirm", on_click=lambda event: close_settings(txt_server_ip.value)),
+                flet.FilledTonalButton("Confirm", on_click=lambda event: close_settings(txt_server_ip.value)),
             ], tight=True),
             padding=10,
         ),
         open=False,
     )
 
-    page.overlay.append(bs)
-    page.add(FloatingActionButton(icon=flet.icons.SETTINGS, on_click=open_settings))
+    page.appbar = flet.AppBar(
+        leading=flet.Icon(flet.icons.ARROW_BACK, color=flet.colors.GREY),
+        title=flet.Text("Menu"),
+        bgcolor=flet.colors.PINK_900,
+        center_title=False,
+        toolbar_height=45,
+        actions=[
+            flet.FloatingActionButton(icon=flet.icons.SETTINGS, on_click=open_settings, mini=True, bgcolor=flet.colors.GREY_700, tooltip="Settings"),
+        ]
+    )
 
+    page.overlay.append(bs)
+    
     btn_private_server = ElevatedButton(text="Launch Private Server", on_click=lambda event: launch_private_server(txt_server_ip.value))
     btn_osu = ElevatedButton(text="Launch OSU!", on_click=launch_osu)
     btn_lazer = ElevatedButton(text="Launcher OSU! Lazer", on_click=launch_lazer)
@@ -92,7 +95,7 @@ def main(page: Page):
     txt_server_ip.value = serverip
     close_btn = flet.OutlinedButton(text="Close", on_click=close)
 
-    page.add(mode, btn_osu, btn_lazer, btn_private_server, close_btn)
+    page.add(btn_osu, btn_lazer, btn_private_server, close_btn)
 
 
 flet.app(target=main)
