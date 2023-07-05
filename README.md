@@ -23,7 +23,7 @@ You can download the executable (only for windows) in the [Releases](https://git
 
 # Build from your device
 1. Clone the repository: `git clone https://github.com/artorias305/osu-launcher.git`
-2. Install the required dependecies: `pip install requirements.txt` or just `pip install flet` (only library being used).
+2. Install the required dependecies: `pip install -r requirements.txt` or manually `pip install flet pillow` (only library being used).
 3. Run the launcher: `python main.py`
 
 # Contributions
