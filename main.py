@@ -10,6 +10,7 @@ def main(page: Page):
     page.vertical_alignment = flet.MainAxisAlignment.CENTER
     page.window_width = "630"
     page.window_height = "270"
+    page.window_resizable = False
 
     def get_osu_path():
         osu_path = os.path.join(appdata_path, 'osu!')
