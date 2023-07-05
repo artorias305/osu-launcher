@@ -15,6 +15,9 @@ This repository contains an open-source osu! launcher written in Python. The osu
 4. Click the "Launch Private Server" button to connect to the private server with the specified IP.
 5. Note that the server_ip.txt file will only be saved after if you close the app AFTER stopping your osu! session, i will fix this in the next version.
 
+# App Preview
+![](https://cdn.discordapp.com/attachments/538398613987131422/1125995082240237698/image.png)
+
 # Installation
 You can download the executable (only for windows) in the [Releases](https://github.com/artorias305/osu-launcher/releases/) page.
 
