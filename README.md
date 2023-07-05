@@ -13,7 +13,7 @@ This repository contains an open-source osu! launcher written in Python. The osu
 2. Click the "Launch osu!lazer" button to launch the next-generation osu! client.
 3. Use the settings button to specify a custom private server IP.
 4. Click the "Launch Private Server" button to connect to the private server with the specified IP.
-5. Note that the server_ip.txt file will only be saved after if you close the app AFTER stopping your osu! session, i will fix this in the next version.
+5. When adding a new server ip, the server_ip.txt file will be created in your current directory, inside the file will be the server ip and you can edit it directly through there if you want to.
 
 # App Preview
 ![](https://cdn.discordapp.com/attachments/538398613987131422/1125995082240237698/image.png)
