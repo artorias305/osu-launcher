@@ -6,8 +6,8 @@ import subprocess
 def main(page: Page):
     page.title = "Osu! Launcher"
     appdata_path = os.getenv('LOCALAPPDATA')
-    page.window_width = "720"
-    page.window_height = "480"
+    page.window_width = "750"
+    page.window_height = "530"
     page.horizontal_alignment = flet.CrossAxisAlignment.CENTER
     page.vertical_alignment = flet.MainAxisAlignment.CENTER
     page.window_resizable = True
@@ -96,6 +96,5 @@ def main(page: Page):
     close_btn = flet.OutlinedButton(text="Close", on_click=close)
 
     page.add(btn_osu, btn_lazer, btn_private_server, close_btn)
-
 
 flet.app(target=main)
