@@ -1,6 +1,8 @@
 # osu! Launcher
 This repository contains an open-source osu! launcher written in Python. The osu! launcher provides a convenient way to launch the osu! game, osu!lazer, and connect to private servers with a simple and user-friendly interface.
 
+# This application is only for windows!
+
 # Features
  - Launches the original osu! game.
  - Launches osu!lazer, the next-generation osu! client.
