@@ -15,7 +15,7 @@ def main(page: Page):
     page.window_resizable = True
     page.theme = flet.Theme(
         color_scheme=flet.ColorScheme(
-            primary=flet.colors.WHITE,
+            primary=flet.colors.PINK_300,
             primary_container=flet.colors.PINK_900
         )
     )
@@ -130,7 +130,7 @@ def main(page: Page):
     )
 
     page.appbar = flet.AppBar(
-        leading=flet.Icon(flet.icons.ARROW_BACK, color=flet.colors.GREY),
+        leading=flet.Icon(flet.icons.MENU, color=flet.colors.GREY),
         title=flet.Text("Menu"),
         bgcolor=flet.colors.PINK_900,
         center_title=False,
