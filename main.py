@@ -4,6 +4,7 @@ import os
 import subprocess
 import webbrowser
 import requests
+import time
 
 def main(page: Page):
     page.title = "Osu! Launcher"
@@ -24,7 +25,7 @@ def main(page: Page):
     page.window_opacity = 1
 
     def check_update(*args):
-        current_version = "1.2.0"
+        current_version = "1.2.1"
         repo_owner = "artorias305"
         repo_name = "osu-launcher"
 
@@ -41,7 +42,7 @@ def main(page: Page):
                 else:
                     update_status = "You are running the latest version."
             else:
-                update_status = "Failed to check for updates."
+                update_status = "aFailed to check for updates."
 
         except requests.exceptions.RequestException:
             update_status = "Failed to check for updates."
@@ -49,6 +50,9 @@ def main(page: Page):
         txt_update_status = flet.Text(update_status)
 
         page.add(txt_update_status)
+
+        time.sleep(5)
+        page.remove(txt_update_status)
 
     def get_osu_path():
         osu_path = os.path.join(appdata_path, 'osu!')

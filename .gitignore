@@ -4,3 +4,5 @@ dist/
 osu-launcher.spec
 package_app_script.bat
 icon.png
+license.txt
+icon/
