@@ -25,7 +25,7 @@ def main(page: Page):
     page.window_opacity = 1
 
     def check_update(*args):
-        current_version = "1.2.1"
+        current_version = "1.2.2"
         repo_owner = "artorias305"
         repo_name = "osu-launcher"
 
