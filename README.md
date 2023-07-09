@@ -19,7 +19,7 @@ This repository contains an open-source osu! launcher written in Python. The osu
 - (Please keep in mind that this app assumes you use the default installation directory for both osu! and osu!lazer, if you use a different path, you can modify the code for your own path.)
 
 # Installation
-You can download the executable (only for windows) in the [Releases](https://github.com/artorias305/osu-launcher/releases/) page.
+You can download the zip folder in the [Releases](https://github.com/artorias305/osu-launcher/releases/) page and extract it with [7-zip](https://www.7-zip.org/download.html) to your downloads folder or whatever folder you want to.
 
 # Build from your device
 1. Clone the repository: `git clone https://github.com/artorias305/osu-launcher.git`
@@ -30,4 +30,4 @@ You can download the executable (only for windows) in the [Releases](https://git
 Contributions are welcome! If you have any ideas, improvements, or bug fixes, feel free to submit a pull request. Please make sure to follow the project's coding style and guidelines.
 
 # License
-This project is licensed unser the [**MIT LICENSE**](https://opensource.org/license/mit/)
+This project is licensed unser the [MIT LICENSE](https://opensource.org/license/mit/)
