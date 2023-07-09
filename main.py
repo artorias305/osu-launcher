@@ -76,14 +76,14 @@ def main(page: Page):
 
     def read_server_ip():
         try:
-            with open("server_ip.txt", "r") as file:
+            with open("./server-ip/server_ip.txt", "r") as file:
                 serverip = file.read()
                 return serverip.strip()
         except FileNotFoundError:
             return ""
 
     def save_server_ip(serverip):
-        with open("server_ip.txt", "w") as file:
+        with open("./server-ip/server_ip.txt", "w") as file:
             file.write(serverip)
 
     def open_settings(e):
